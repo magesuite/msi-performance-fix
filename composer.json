@@ -1,0 +1,13 @@
+{
+  "name": "creativestyle/magesuite-msi-performance-fix",
+  "description": "Performance fix extension based on https://github.com/magento/inventory/commit/ad57569792551b58d22e169ed536da4ac22a0f2d",
+  "type": "magento2-module",
+  "homepage": "https://creativestyle.de",
+  "license": "OSL-3.0",
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "MageSuite\\MsiPerformanceFix\\": ""
+    }
+  }
+}
