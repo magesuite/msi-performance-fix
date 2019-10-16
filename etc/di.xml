@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\InventoryApi\Api\GetSourcesAssignedToStockOrderedByPriorityInterface"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\Inventory\Model\Source\Command\GetSourcesAssignedToStockOrderedByPriorityCache"/>
+    <preference for="Magento\InventoryCatalogApi\Model\GetProductIdsBySkusInterface"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\InventoryCatalog\Model\GetProductIdsBySkusCache"/>
+    <preference for="Magento\InventoryCatalogApi\Model\GetProductTypesBySkusInterface"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\InventoryCatalog\Model\ResourceModel\GetProductTypesBySkusCache"/>
+    <preference for="Magento\InventorySalesApi\Model\GetStockItemDataInterface"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\InventoryIndexer\Model\ResourceModel\GetStockItemDataCache"/>
+    <preference for="Magento\InventoryReservationsApi\Model\GetReservationsQuantityInterface"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\InventoryReservations\Model\ResourceModel\GetReservationsQuantityCache"/>
+    <preference for="Magento\InventorySalesApi\Model\GetAssignedSalesChannelsForStockInterface"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\InventorySales\Model\GetAssignedSalesChannelsForStockCache"/>
+    <preference for="Magento\InventorySalesApi\Api\GetStockBySalesChannelInterface"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\InventorySales\Model\GetStockBySalesChannelCache"/>
+
+    <type name="Magento\InventoryConfiguration\Model\GetLegacyStockItem">
+        <plugin name="cache_legacy_stock_item"
+                type="MageSuite\MsiPerformanceFix\Preference\Magento\InventoryConfiguration\Plugin\InventoryConfiguration\Model\GetLegacyStockItemCache"/>
+    </type>
+</config>

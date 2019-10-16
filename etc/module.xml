@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
     <module name="MageSuite_MsiPerformanceFix" setup_version="1.0.0">
+        <sequence>
+            <module name="Magento_InventoryApi"/>
+            <module name="Magento_InventoryCatalogApi"/>
+            <module name="Magento_InventorySalesApi"/>
+            <module name="Magento_InventoryReservationsApi"/>
+            <module name="Magento_CatalogInventory"/>
+            <module name="Magento_InventoryConfiguration"/>
+        </sequence>
     </module>
 </config>
