@@ -17,7 +17,7 @@ class GetReservationsQuantityCache implements GetReservationsQuantityInterface
     /**
      * @var array
      */
-    private $reservationsQuantity = [[]];
+    private $reservationsQuantity = [];
     /**
      * @param GetReservationsQuantity $getReservationsQuantity
      */
@@ -35,5 +35,10 @@ class GetReservationsQuantityCache implements GetReservationsQuantityInterface
             $this->reservationsQuantity[$sku][$stockId] = $this->getReservationsQuantity->execute($sku, $stockId);
         }
         return $this->reservationsQuantity[$sku][$stockId];
+    }
+
+    public function cleanCache(): void
+    {
+        $this->reservationsQuantity = [];
     }
 }
